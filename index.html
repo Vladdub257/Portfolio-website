@@ -71,11 +71,11 @@
         <div class="hero-aside">
           <div class="hero-stats">
             <div class="hero-stat">
-              <span class="hero-stat-value">0</span>
+              <span class="hero-stat-value">1</span>
               <span class="hero-stat-label">Years of Experience</span>
             </div>
             <div class="hero-stat">
-              <span class="hero-stat-value">0</span>
+              <span class="hero-stat-value">6</span>
               <span class="hero-stat-label">Projects Completed</span>
             </div>
           </div>
@@ -707,11 +707,11 @@
                 </div>
                 <div class="contact-link-content">
                   <span class="contact-link-label">Upwork</span>
-                  <span class="contact-link-value">Vladislav Dubrova</span>
+                  <span class="contact-link-value">Vladislav D.</span>
                 </div>
               </a>
             </div>
-            <a href="mailto:your@email.com" class="btn btn-primary btn-large btn-full">
+            <a href="mailto:your@email.com" class="btn btn-primary btn-large btn-full js-open-quote-modal">
               <span>Get a Project Estimate</span>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                 stroke-linecap="round" stroke-linejoin="round">
@@ -743,6 +743,73 @@
       <p class="footer-copy">Built with care, structure, and attention to detail.</p>
     </div>
   </footer>
+
+  <div class="modal" id="quoteModal" aria-hidden="true">
+    <div class="modal-overlay" data-close-modal></div>
+
+    <div class="modal-dialog" role="dialog" aria-modal="true" aria-labelledby="quoteModalTitle">
+      <button class="modal-close" id="quoteModalClose" type="button" aria-label="Close form">
+        <span></span>
+        <span></span>
+      </button>
+
+      <div class="modal-header">
+        <span class="modal-label">Project Inquiry</span>
+        <h2 class="modal-title" id="quoteModalTitle">Get a Project Estimate</h2>
+        <p class="modal-text">
+          Tell me a bit about your project and I’ll review the scope, timeline, and pricing.
+        </p>
+      </div>
+
+      <form class="quote-form" id="quoteForm">
+        <div class="quote-form-grid">
+          <div class="form-group">
+            <label for="quoteName" class="form-label">Your Name</label>
+            <input id="quoteName" name="name" type="text" class="form-input" placeholder="Your name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="quoteEmail" class="form-label">Email</label>
+            <input id="quoteEmail" name="email" type="email" class="form-input" placeholder="name@example.com" required>
+          </div>
+        </div>
+
+        <div class="quote-form-grid">
+          <div class="form-group">
+            <label for="quoteType" class="form-label">Project Type</label>
+            <select id="quoteType" name="projectType" class="form-input form-select" required>
+              <option value="" disabled selected>Select project type</option>
+              <option value="landing-page">Landing Page</option>
+              <option value="small-website">Small Website</option>
+              <option value="figma-to-frontend">Frontend from Figma</option>
+              <option value="updates-fixes">Updates / Fixes</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="quoteBudget" class="form-label">Budget</label>
+            <input id="quoteBudget" name="budget" type="text" class="form-input" placeholder="€150 - €300">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="quoteTimeline" class="form-label">Preferred Timeline</label>
+          <input id="quoteTimeline" name="timeline" type="text" class="form-input" placeholder="Within 2 weeks">
+        </div>
+
+        <div class="form-group">
+          <label for="quoteDetails" class="form-label">Project Details</label>
+          <textarea id="quoteDetails" name="details" class="form-textarea" placeholder="Tell me about your project"
+            required></textarea>
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary btn-full">Send Request</button>
+        </div>
+      </form>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>

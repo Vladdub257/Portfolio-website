@@ -117,3 +117,53 @@ document.addEventListener('DOMContentLoaded', function () {
     });
   });
 });
+
+// Quote modal
+const quoteModal = document.getElementById('quoteModal');
+const quoteModalClose = document.getElementById('quoteModalClose');
+const quoteModalOverlay = quoteModal ? quoteModal.querySelector('[data-close-modal]') : null;
+const quoteModalTriggers = document.querySelectorAll('.js-open-quote-modal');
+
+function openQuoteModal() {
+  if (!quoteModal) return;
+
+  quoteModal.classList.add('is-open');
+  quoteModal.setAttribute('aria-hidden', 'false');
+  document.body.classList.add('modal-open');
+
+  const firstField = quoteModal.querySelector('input, select, textarea');
+  if (firstField) {
+    setTimeout(function () {
+      firstField.focus();
+    }, 50);
+  }
+}
+
+function closeQuoteModal() {
+  if (!quoteModal) return;
+
+  quoteModal.classList.remove('is-open');
+  quoteModal.setAttribute('aria-hidden', 'true');
+  document.body.classList.remove('modal-open');
+}
+
+quoteModalTriggers.forEach(function (trigger) {
+  trigger.addEventListener('click', function (e) {
+    e.preventDefault();
+    openQuoteModal();
+  });
+});
+
+if (quoteModalClose) {
+  quoteModalClose.addEventListener('click', closeQuoteModal);
+}
+
+if (quoteModalOverlay) {
+  quoteModalOverlay.addEventListener('click', closeQuoteModal);
+}
+
+document.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape' && quoteModal && quoteModal.classList.contains('is-open')) {
+    closeQuoteModal();
+  }
+});

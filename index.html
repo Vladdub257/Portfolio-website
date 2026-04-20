@@ -7,13 +7,21 @@
   <meta name="description"
     content="Vlad - Freelance Frontend Developer. Clean, responsive websites for freelancers, small businesses, and personal brands.">
   <title>Vlad | Freelance Frontend Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500;700&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
   <header class="header">
     <div class="container header-inner">
-      <a href="#" class="logo">Vlad</a>
+      <a href="#" class="logo">
+        <span class="logo-text">Vlad</span>
+        <span class="logo-dot"></span>
+      </a>
       <nav class="nav" id="nav">
         <ul class="nav-list">
           <li><a href="#about" class="nav-link">About</a></li>
@@ -21,7 +29,7 @@
           <li><a href="#process" class="nav-link">Process</a></li>
           <li><a href="#pricing" class="nav-link">Pricing</a></li>
           <li><a href="#portfolio" class="nav-link">Work</a></li>
-          <li><a href="#contact" class="nav-link nav-link-cta">Contact</a></li>
+          <li><a href="#contact" class="nav-link nav-link-cta">Get in Touch</a></li>
         </ul>
       </nav>
       <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
@@ -35,29 +43,82 @@
   <main>
     <!-- Hero Section -->
     <section class="hero">
-      <div class="container">
-        <span class="badge">Freelance Frontend Developer</span>
-        <h1 class="hero-title">Frontend websites for freelancers, small businesses, and personal brands</h1>
-        <p class="hero-subtitle">I build clean, responsive websites in HTML, CSS, JavaScript, and WordPress. Clear
-          structure, thoughtful styling, and a result that feels reliable from the first screen.</p>
-        <div class="hero-buttons">
-          <a href="#portfolio" class="btn btn-primary">View Projects</a>
-          <a href="#contact" class="btn btn-secondary">Get a Quote</a>
+      <div class="hero-bg">
+        <div class="hero-grid"></div>
+        <div class="hero-glow"></div>
+      </div>
+      <div class="container hero-container">
+        <div class="hero-content">
+          <div class="hero-label">
+            <span class="hero-label-dot"></span>
+            <span>Freelance Frontend Developer</span>
+          </div>
+          <h1 class="hero-title">Building websites that feel <em>right</em></h1>
+          <p class="hero-subtitle">Clean structure, responsive layouts, and frontend work that communicates clearly. For
+            freelancers, small businesses, and personal brands who value careful craft.</p>
+          <div class="hero-buttons">
+            <a href="#portfolio" class="btn btn-primary">
+              <span>View Projects</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+            <a href="#contact" class="btn btn-secondary">Get a Quote</a>
+          </div>
         </div>
+        <div class="hero-aside">
+          <div class="hero-stats">
+            <div class="hero-stat">
+              <span class="hero-stat-value">3+</span>
+              <span class="hero-stat-label">Years of Experience</span>
+            </div>
+            <div class="hero-stat">
+              <span class="hero-stat-value">20+</span>
+              <span class="hero-stat-label">Projects Completed</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-scroll">
+        <span>Scroll to explore</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round">
+          <line x1="12" y1="5" x2="12" y2="19"></line>
+          <polyline points="19 12 12 19 5 12"></polyline>
+        </svg>
       </div>
     </section>
 
     <!-- About Section -->
     <section class="section" id="about">
       <div class="container">
-        <h2 class="section-title">About Me</h2>
-        <div class="about-content">
-          <p>My name is Vlad, and I build clean, responsive websites for small businesses, specialists, personal brands,
-            and independent projects.</p>
-          <p>I work with HTML, CSS, JavaScript, WordPress, GitHub, Vercel, and Figma-to-code workflows. My focus is
-            clear structure, balanced layout, and frontend work that feels polished, reliable, and easy to use.</p>
-          <p>I prefer simple, well-organized solutions over unnecessary complexity. A good website should communicate
-            clearly, work smoothly on different devices, and leave a strong first impression.</p>
+        <div class="section-header">
+          <span class="section-label">01</span>
+          <h2 class="section-title">About Me</h2>
+        </div>
+        <div class="about-grid">
+          <div class="about-content">
+            <p class="about-lead">I'm Vlad, a frontend developer focused on building clean, responsive websites that
+              work well and look considered.</p>
+            <p>I work with HTML, CSS, JavaScript, WordPress, and modern deployment workflows. My focus is clear
+              structure, balanced layout, and frontend work that feels polished and reliable.</p>
+            <p>I prefer simple, well-organized solutions over unnecessary complexity. A good website should communicate
+              clearly, work smoothly across devices, and leave a confident first impression.</p>
+          </div>
+          <div class="about-tools">
+            <h3 class="about-tools-title">Tools I Use</h3>
+            <div class="about-tools-list">
+              <span class="about-tool">HTML</span>
+              <span class="about-tool">CSS</span>
+              <span class="about-tool">JavaScript</span>
+              <span class="about-tool">WordPress</span>
+              <span class="about-tool">GitHub</span>
+              <span class="about-tool">Vercel</span>
+              <span class="about-tool">Figma</span>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -65,59 +126,43 @@
     <!-- Principles Section -->
     <section class="section section-alt" id="principles">
       <div class="container">
-        <h2 class="section-title">Core Principles</h2>
+        <div class="section-header section-header-center">
+          <span class="section-label">02</span>
+          <h2 class="section-title">Core Principles</h2>
+          <p class="section-intro">The values that guide every project I take on.</p>
+        </div>
         <div class="principles-grid">
           <div class="principle-card">
-            <div class="principle-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <polyline points="16 18 22 12 16 6"></polyline>
-                <polyline points="8 6 2 12 8 18"></polyline>
-              </svg>
+            <div class="principle-number">01</div>
+            <div class="principle-content">
+              <h3 class="principle-title">Clean Code</h3>
+              <p class="principle-text">Readable structure, maintainable frontend, and no unnecessary chaos in the
+                codebase.</p>
             </div>
-            <h3 class="principle-title">Clean Code</h3>
-            <p class="principle-text">Readable structure, maintainable frontend, and no unnecessary chaos in the
-              codebase.</p>
           </div>
 
           <div class="principle-card">
-            <div class="principle-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <rect x="5" y="2" width="14" height="20" rx="2" ry="2"></rect>
-                <line x1="12" y1="18" x2="12.01" y2="18"></line>
-              </svg>
+            <div class="principle-number">02</div>
+            <div class="principle-content">
+              <h3 class="principle-title">Responsive Layout</h3>
+              <p class="principle-text">Consistent experience across desktop, tablet, and mobile screens.</p>
             </div>
-            <h3 class="principle-title">Responsive Layout</h3>
-            <p class="principle-text">Consistent experience across desktop, tablet, and mobile screens.</p>
           </div>
 
           <div class="principle-card">
-            <div class="principle-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <line x1="8" y1="6" x2="21" y2="6"></line>
-                <line x1="8" y1="12" x2="21" y2="12"></line>
-                <line x1="8" y1="18" x2="21" y2="18"></line>
-                <line x1="3" y1="6" x2="3.01" y2="6"></line>
-                <line x1="3" y1="12" x2="3.01" y2="12"></line>
-                <line x1="3" y1="18" x2="3.01" y2="18"></line>
-              </svg>
+            <div class="principle-number">03</div>
+            <div class="principle-content">
+              <h3 class="principle-title">Clear Structure</h3>
+              <p class="principle-text">Every section has a purpose and guides the visitor naturally.</p>
             </div>
-            <h3 class="principle-title">Clear Structure</h3>
-            <p class="principle-text">Every section has a purpose and guides the visitor naturally.</p>
           </div>
 
           <div class="principle-card">
-            <div class="principle-icon">
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <circle cx="12" cy="12" r="10"></circle>
-                <polyline points="12 6 12 12 16 14"></polyline>
-              </svg>
+            <div class="principle-number">04</div>
+            <div class="principle-content">
+              <h3 class="principle-title">On-Time Delivery</h3>
+              <p class="principle-text">Clear process, realistic scope, and respect for deadlines.</p>
             </div>
-            <h3 class="principle-title">On-Time Delivery</h3>
-            <p class="principle-text">Clear process, realistic scope, and respect for deadlines.</p>
           </div>
         </div>
       </div>
@@ -126,52 +171,93 @@
     <!-- Services Section -->
     <section class="section" id="services">
       <div class="container">
-        <h2 class="section-title">What I Do</h2>
-        <p class="section-intro">I help turn ideas, wireframes, and designs into clean, responsive websites that are
-          easy to understand and comfortable to use.</p>
+        <div class="section-header">
+          <span class="section-label">03</span>
+          <h2 class="section-title">What I Do</h2>
+          <p class="section-intro">I help turn ideas, wireframes, and designs into clean, responsive websites that are
+            easy to understand and comfortable to use.</p>
+        </div>
 
         <div class="services-grid">
           <div class="service-card">
+            <div class="service-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                <line x1="3" y1="9" x2="21" y2="9"></line>
+                <line x1="9" y1="21" x2="9" y2="9"></line>
+              </svg>
+            </div>
             <h3 class="service-title">Landing Pages</h3>
             <p class="service-text">Single-page websites for services, products, events, or personal projects. Clear
               structure, strong first impression, and responsive layout by default.</p>
           </div>
 
           <div class="service-card">
+            <div class="service-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 19l7-7 3 3-7 7-3-3z"></path>
+                <path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"></path>
+                <path d="M2 2l7.586 7.586"></path>
+                <circle cx="11" cy="11" r="2"></circle>
+              </svg>
+            </div>
             <h3 class="service-title">Frontend from Figma</h3>
             <p class="service-text">Turning ready-made designs into clean, responsive interfaces with HTML, CSS, and
               JavaScript.</p>
           </div>
 
           <div class="service-card">
+            <div class="service-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"></path>
+                <polyline points="9 22 9 12 15 12 15 22"></polyline>
+              </svg>
+            </div>
             <h3 class="service-title">Small Business Websites</h3>
             <p class="service-text">Simple multi-section or multi-page websites for businesses, specialists, studios,
               and local services.</p>
           </div>
 
           <div class="service-card">
+            <div class="service-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                </path>
+              </svg>
+            </div>
             <h3 class="service-title">Website Updates / Fixes</h3>
             <p class="service-text">Adding sections, improving layout, fixing inconsistencies, refining styles, and
               making existing pages more reliable.</p>
           </div>
         </div>
 
-        <p class="pricing-note">Also available: responsive improvements, simple WordPress setups, and section redesigns.
-        </p>
+        <p class="services-note">Also available: responsive improvements, simple WordPress setups, and section
+          redesigns.</p>
       </div>
     </section>
 
     <!-- Process Section -->
     <section class="section section-alt" id="process">
       <div class="container">
-        <h2 class="section-title">How the Work Process Looks</h2>
-        <p class="section-intro">I prefer a simple and transparent workflow. Clear steps help avoid confusion, save
-          time, and make the result more predictable for both sides. Most small projects are completed within a few days
-          to a couple of weeks, depending on scope.</p>
+        <div class="section-header section-header-center">
+          <span class="section-label">04</span>
+          <h2 class="section-title">How It Works</h2>
+          <p class="section-intro">A simple, transparent workflow. Clear steps help avoid confusion and make the result
+            predictable for both sides.</p>
+        </div>
 
         <div class="process-timeline">
+          <div class="process-line"></div>
+
           <div class="process-step">
-            <div class="process-number">01</div>
+            <div class="process-marker">
+              <span class="process-number">01</span>
+            </div>
             <div class="process-content">
               <h3 class="process-title">Discuss the Task</h3>
               <p class="process-text">We define the goal, structure, and what the website needs to communicate.</p>
@@ -179,7 +265,9 @@
           </div>
 
           <div class="process-step">
-            <div class="process-number">02</div>
+            <div class="process-marker">
+              <span class="process-number">02</span>
+            </div>
             <div class="process-content">
               <h3 class="process-title">Estimate Price and Timeline</h3>
               <p class="process-text">I review the scope and provide a clear price range and realistic delivery
@@ -188,7 +276,9 @@
           </div>
 
           <div class="process-step">
-            <div class="process-number">03</div>
+            <div class="process-marker">
+              <span class="process-number">03</span>
+            </div>
             <div class="process-content">
               <h3 class="process-title">Build the First Version</h3>
               <p class="process-text">I create the first working version with responsive layout, visual clarity, and
@@ -197,7 +287,9 @@
           </div>
 
           <div class="process-step">
-            <div class="process-number">04</div>
+            <div class="process-marker">
+              <span class="process-number">04</span>
+            </div>
             <div class="process-content">
               <h3 class="process-title">Revisions</h3>
               <p class="process-text">We review the result and make agreed improvements to refine details and better
@@ -206,7 +298,9 @@
           </div>
 
           <div class="process-step">
-            <div class="process-number">05</div>
+            <div class="process-marker">
+              <span class="process-number">05</span>
+            </div>
             <div class="process-content">
               <h3 class="process-title">Final Delivery</h3>
               <p class="process-text">You receive the finished website or code files, ready for use, editing, or
@@ -214,42 +308,94 @@
             </div>
           </div>
         </div>
+
+        <p class="process-note">Most small projects are completed within a few days to a couple of weeks, depending on
+          scope.</p>
       </div>
     </section>
 
     <!-- Pricing Section -->
     <section class="section" id="pricing">
       <div class="container">
-        <h2 class="section-title">Pricing</h2>
-        <p class="section-intro">The final cost depends on the size of the project, complexity of the layout, and
-          deadlines. Here are the usual starting points.</p>
+        <div class="section-header">
+          <span class="section-label">05</span>
+          <h2 class="section-title">Pricing</h2>
+          <p class="section-intro">The final cost depends on the size of the project, complexity of the layout, and
+            deadlines. Here are the usual starting points.</p>
+        </div>
 
         <div class="pricing-grid">
           <div class="pricing-card">
-            <h3 class="pricing-title">Landing Page</h3>
-            <div class="pricing-price">from &euro;150</div>
+            <div class="pricing-header">
+              <h3 class="pricing-title">Landing Page</h3>
+              <div class="pricing-price">
+                <span class="pricing-currency">€</span>
+                <span class="pricing-amount">150</span>
+                <span class="pricing-from">from</span>
+              </div>
+            </div>
             <p class="pricing-text">1 page, responsive layout, clear structure, and a clean presentation for a service,
               product, or personal project.</p>
+            <ul class="pricing-features">
+              <li>Responsive design</li>
+              <li>Clear structure</li>
+              <li>Clean code</li>
+            </ul>
           </div>
 
-          <div class="pricing-card">
-            <h3 class="pricing-title">Page from Design</h3>
-            <div class="pricing-price">from &euro;100</div>
-            <p class="pricing-text">Frontend implementation of a ready-made Figma layout or similar design source.</p>
-          </div>
-
-          <div class="pricing-card">
-            <h3 class="pricing-title">Small Website</h3>
-            <div class="pricing-price">from &euro;250</div>
+          <div class="pricing-card pricing-card-featured">
+            <div class="pricing-badge">Popular</div>
+            <div class="pricing-header">
+              <h3 class="pricing-title">Small Website</h3>
+              <div class="pricing-price">
+                <span class="pricing-currency">€</span>
+                <span class="pricing-amount">250</span>
+                <span class="pricing-from">from</span>
+              </div>
+            </div>
             <p class="pricing-text">A compact website for a specialist, service, or business with multiple sections or
               pages.</p>
+            <ul class="pricing-features">
+              <li>Multiple pages/sections</li>
+              <li>Responsive design</li>
+              <li>Contact forms</li>
+              <li>SEO basics</li>
+            </ul>
           </div>
 
           <div class="pricing-card">
-            <h3 class="pricing-title">Updates / Fixes</h3>
-            <div class="pricing-price">from &euro;20/hour</div>
+            <div class="pricing-header">
+              <h3 class="pricing-title">Page from Design</h3>
+              <div class="pricing-price">
+                <span class="pricing-currency">€</span>
+                <span class="pricing-amount">100</span>
+                <span class="pricing-from">from</span>
+              </div>
+            </div>
+            <p class="pricing-text">Frontend implementation of a ready-made Figma layout or similar design source.</p>
+            <ul class="pricing-features">
+              <li>Pixel-perfect code</li>
+              <li>Responsive adaptation</li>
+              <li>Clean markup</li>
+            </ul>
+          </div>
+
+          <div class="pricing-card">
+            <div class="pricing-header">
+              <h3 class="pricing-title">Updates / Fixes</h3>
+              <div class="pricing-price">
+                <span class="pricing-currency">€</span>
+                <span class="pricing-amount">20</span>
+                <span class="pricing-from">/hour</span>
+              </div>
+            </div>
             <p class="pricing-text">Layout fixes, new sections, style cleanup, responsive improvements, and visual
               consistency updates.</p>
+            <ul class="pricing-features">
+              <li>Flexible scope</li>
+              <li>Quick turnaround</li>
+              <li>Clear communication</li>
+            </ul>
           </div>
         </div>
 
@@ -261,54 +407,150 @@
     <!-- Portfolio Section -->
     <section class="section section-alt" id="portfolio">
       <div class="container">
-        <h2 class="section-title">Selected Work</h2>
-        <p class="section-intro">A few examples of projects and concepts that reflect the kind of structure, style, and
-          frontend work I focus on.</p>
+        <div class="section-header section-header-center">
+          <span class="section-label">06</span>
+          <h2 class="section-title">Selected Work</h2>
+          <p class="section-intro">A few examples of projects that reflect the kind of structure, style, and frontend
+            work I focus on.</p>
+        </div>
 
         <div class="portfolio-grid">
-          <div class="portfolio-card">
-            <div class="portfolio-image"></div>
+          <article class="portfolio-card portfolio-card-large">
+            <div class="portfolio-image">
+              <div class="portfolio-image-placeholder">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                  <polyline points="21 15 16 10 5 21"></polyline>
+                </svg>
+              </div>
+            </div>
             <div class="portfolio-content">
-              <h3 class="portfolio-title">Prague Tram Bar Concept</h3>
+              <div class="portfolio-meta">
+                <span class="portfolio-type">Concept</span>
+                <span class="portfolio-year">2024</span>
+              </div>
+              <h3 class="portfolio-title">Prague Tram Bar</h3>
               <p class="portfolio-text">Dark-themed landing page concept with atmospheric visual direction, strong
                 typography, and a distinctive night-city mood.</p>
-              <p class="portfolio-meta">HTML / CSS / JavaScript</p>
+              <div class="portfolio-stack">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
               <div class="portfolio-links">
-                <a href="#" class="portfolio-link" target="_blank" rel="noopener noreferrer">Live Demo</a>
-                <a href="#" class="portfolio-link" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="#" class="portfolio-link portfolio-link-primary">
+                  <span>Live Demo</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+                <a href="#" class="portfolio-link">
+                  <span>GitHub</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                  </svg>
+                </a>
               </div>
             </div>
-          </div>
+          </article>
 
-          <div class="portfolio-card">
-            <div class="portfolio-image"></div>
+          <article class="portfolio-card">
+            <div class="portfolio-image">
+              <div class="portfolio-image-placeholder">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                  <polyline points="21 15 16 10 5 21"></polyline>
+                </svg>
+              </div>
+            </div>
             <div class="portfolio-content">
+              <div class="portfolio-meta">
+                <span class="portfolio-type">Client Work</span>
+                <span class="portfolio-year">2024</span>
+              </div>
               <h3 class="portfolio-title">Service Landing Page</h3>
-              <p class="portfolio-text">A clean promotional page built to present a service clearly, guide attention,
-                and keep the structure easy to scan.</p>
-              <p class="portfolio-meta">HTML / CSS / JavaScript</p>
+              <p class="portfolio-text">A clean promotional page built to present a service clearly and guide attention
+                through a well-structured layout.</p>
+              <div class="portfolio-stack">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
               <div class="portfolio-links">
-                <a href="#" class="portfolio-link" target="_blank" rel="noopener noreferrer">Live Demo</a>
-                <a href="#" class="portfolio-link" target="_blank" rel="noopener noreferrer">GitHub</a>
+                <a href="#" class="portfolio-link portfolio-link-primary">
+                  <span>Live Demo</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
+                <a href="#" class="portfolio-link">
+                  <span>GitHub</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                  </svg>
+                </a>
               </div>
             </div>
-          </div>
+          </article>
 
-          <div class="portfolio-card">
-            <div class="portfolio-image"></div>
+          <article class="portfolio-card">
+            <div class="portfolio-image">
+              <div class="portfolio-image-placeholder">
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                  <circle cx="8.5" cy="8.5" r="1.5"></circle>
+                  <polyline points="21 15 16 10 5 21"></polyline>
+                </svg>
+              </div>
+            </div>
             <div class="portfolio-content">
-              <h3 class="portfolio-title">Personal Portfolio Website</h3>
+              <div class="portfolio-meta">
+                <span class="portfolio-type">Personal</span>
+                <span class="portfolio-year">2024</span>
+              </div>
+              <h3 class="portfolio-title">Personal Portfolio</h3>
               <p class="portfolio-text">A minimal portfolio website focused on clarity, responsiveness, and calm visual
                 presentation.</p>
-              <p class="portfolio-meta">HTML / CSS / JavaScript</p>
+              <div class="portfolio-stack">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
               <div class="portfolio-links">
-                <a href="https://portfolio-website-seven-psi-37.vercel.app/" class="portfolio-link" target="_blank"
-                  rel="noopener noreferrer">Live Demo</a>
+                <a href="https://portfolio-website-seven-psi-37.vercel.app/"
+                  class="portfolio-link portfolio-link-primary" target="_blank" rel="noopener noreferrer">
+                  <span>Live Demo</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+                    <polyline points="15 3 21 3 21 9"></polyline>
+                    <line x1="10" y1="14" x2="21" y2="3"></line>
+                  </svg>
+                </a>
                 <a href="https://github.com/Vladdub257" class="portfolio-link" target="_blank"
-                  rel="noopener noreferrer">GitHub</a>
+                  rel="noopener noreferrer">
+                  <span>GitHub</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                  </svg>
+                </a>
               </div>
             </div>
-          </div>
+          </article>
         </div>
       </div>
     </section>
@@ -316,65 +558,186 @@
     <!-- Tech Stack Section -->
     <section class="section" id="tech">
       <div class="container">
-        <h2 class="section-title">Tech Stack</h2>
-        <p class="section-intro">I use a simple and practical stack depending on the task. These are the tools and
-          workflows I work with most often.</p>
+        <div class="section-header section-header-center">
+          <span class="section-label">07</span>
+          <h2 class="section-title">Tech Stack</h2>
+          <p class="section-intro">A practical, straightforward set of tools for building clean frontend work.</p>
+        </div>
         <div class="tech-grid">
-          <div class="tech-item">HTML</div>
-          <div class="tech-item">CSS</div>
-          <div class="tech-item">JavaScript</div>
-          <div class="tech-item">WordPress</div>
-          <div class="tech-item">GitHub</div>
-          <div class="tech-item">Vercel</div>
-          <div class="tech-item">Figma to Code</div>
+          <div class="tech-item">
+            <div class="tech-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="16 18 22 12 16 6"></polyline>
+                <polyline points="8 6 2 12 8 18"></polyline>
+              </svg>
+            </div>
+            <span class="tech-name">HTML</span>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 2v20l8-4 8 4V2H4z"></path>
+              </svg>
+            </div>
+            <span class="tech-name">CSS</span>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+                <path d="M2 17l10 5 10-5"></path>
+                <path d="M2 12l10 5 10-5"></path>
+              </svg>
+            </div>
+            <span class="tech-name">JavaScript</span>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <circle cx="12" cy="12" r="4"></circle>
+                <line x1="21.17" y1="8" x2="12" y2="8"></line>
+                <line x1="3.95" y1="6.06" x2="8.54" y2="14"></line>
+                <line x1="10.88" y1="21.94" x2="15.46" y2="14"></line>
+              </svg>
+            </div>
+            <span class="tech-name">WordPress</span>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4">
+                </path>
+                <path d="M9 18c-4.51 2-5-2-7-2"></path>
+              </svg>
+            </div>
+            <span class="tech-name">GitHub</span>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="12 2 22 8.5 22 15.5 12 22 2 15.5 2 8.5 12 2"></polygon>
+                <line x1="12" y1="22" x2="12" y2="15.5"></line>
+                <polyline points="22 8.5 12 15.5 2 8.5"></polyline>
+              </svg>
+            </div>
+            <span class="tech-name">Vercel</span>
+          </div>
+          <div class="tech-item">
+            <div class="tech-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 5.5A3.5 3.5 0 0 1 8.5 2H12v7H8.5A3.5 3.5 0 0 1 5 5.5z"></path>
+                <path d="M12 2h3.5a3.5 3.5 0 1 1 0 7H12V2z"></path>
+                <path d="M12 12.5a3.5 3.5 0 1 1 7 0 3.5 3.5 0 1 1-7 0z"></path>
+                <path d="M5 19.5A3.5 3.5 0 0 1 8.5 16H12v3.5a3.5 3.5 0 1 1-7 0z"></path>
+                <path d="M5 12.5A3.5 3.5 0 0 1 8.5 9H12v7H8.5A3.5 3.5 0 0 1 5 12.5z"></path>
+              </svg>
+            </div>
+            <span class="tech-name">Figma</span>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- Contact Section -->
     <section class="section section-alt" id="contact">
-      <div class="container contact-container">
-        <h2 class="section-title">Let&apos;s Build Something Clear and Well-Made</h2>
-        <p class="contact-intro">If you need a clean and reliable website, send me a short description of your project,
-          a few reference examples if you have them, and your preferred timeline. I am open to freelance work, website
-          improvements, and small to medium frontend projects.</p>
+      <div class="container">
+        <div class="contact-wrapper">
+          <div class="contact-content">
+            <div class="section-header">
+              <span class="section-label">08</span>
+              <h2 class="section-title">Let&apos;s Work Together</h2>
+            </div>
+            <p class="contact-intro">If you need a clean, well-structured website, I&apos;d be happy to hear about your
+              project. Send me a short description, a few reference examples if you have them, and your preferred
+              timeline.</p>
+            <p class="contact-note">I&apos;m open to freelance work, website improvements, and small to medium frontend
+              projects.</p>
+          </div>
 
-        <div class="contact-links">
-          <a href="https://t.me/YOUR_USERNAME" class="contact-link" target="_blank" rel="noopener noreferrer">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
-            </svg>
-            Telegram
-          </a>
+          <div class="contact-card">
+            <div class="contact-card-header">
+              <span class="contact-card-label">Get in Touch</span>
+            </div>
+            <div class="contact-links">
+              <a href="https://t.me/YOUR_USERNAME" class="contact-link" target="_blank" rel="noopener noreferrer">
+                <div class="contact-link-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z" />
+                  </svg>
+                </div>
+                <div class="contact-link-content">
+                  <span class="contact-link-label">Telegram</span>
+                  <span class="contact-link-value">@YOUR_USERNAME</span>
+                </div>
+              </a>
 
-          <a href="mailto:your@email.com" class="contact-link">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-              stroke-linecap="round" stroke-linejoin="round">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-              <polyline points="22,6 12,13 2,6"></polyline>
-            </svg>
-            Email
-          </a>
+              <a href="mailto:your@email.com" class="contact-link">
+                <div class="contact-link-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </div>
+                <div class="contact-link-content">
+                  <span class="contact-link-label">Email</span>
+                  <span class="contact-link-value">your@email.com</span>
+                </div>
+              </a>
 
-          <a href="https://github.com/Vladdub257" class="contact-link" target="_blank" rel="noopener noreferrer">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-              <path
-                d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
-            </svg>
-            GitHub
-          </a>
+              <a href="https://github.com/Vladdub257" class="contact-link" target="_blank" rel="noopener noreferrer">
+                <div class="contact-link-icon">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                    <path
+                      d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                  </svg>
+                </div>
+                <div class="contact-link-content">
+                  <span class="contact-link-label">GitHub</span>
+                  <span class="contact-link-value">Vladdub257</span>
+                </div>
+              </a>
+            </div>
+            <a href="mailto:your@email.com" class="btn btn-primary btn-large btn-full">
+              <span>Get a Project Estimate</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+          </div>
         </div>
-
-        <a href="mailto:your@email.com" class="btn btn-primary btn-large">Get a Project Estimate</a>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <div class="container">
-      <p class="footer-text"><strong>Vlad</strong> | Freelance Frontend Developer</p>
-      <p class="footer-subtext">Built with care, structure, and modern frontend principles.</p>
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <a href="#" class="logo">
+          <span class="logo-text">Vlad</span>
+          <span class="logo-dot"></span>
+        </a>
+        <p class="footer-tagline">Freelance Frontend Developer</p>
+      </div>
+      <div class="footer-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Work</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <p class="footer-copy">Built with care, structure, and attention to detail.</p>
     </div>
   </footer>
 
